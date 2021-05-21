@@ -17,7 +17,7 @@ public class CountDown : MonoBehaviour
     {
         ButtonBehaviour.OnButtonDown += HandleButtonDown;
         OnFinishedTime += HandleFinishedTime;
-        SecondsDisplay.text = TotalSeconds.ToString();
+        SecondsDisplay.text = "Seconds: " + TotalSeconds.ToString();
     }
 
     private void OnDestroy()
@@ -36,7 +36,7 @@ public class CountDown : MonoBehaviour
         if (TotalSeconds < ElapsedSeconds)
             OnFinishedTime?.Invoke();
         else
-            SecondsDisplay.text = (TotalSeconds - ElapsedSeconds).ToString().Substring(0,4);
+            SecondsDisplay.text = (TotalSeconds - ElapsedSeconds).ToString().Substring(0,4) + "s";
     }
 
     void HandleButtonDown()
@@ -51,6 +51,8 @@ public class CountDown : MonoBehaviour
         SecondsDisplay.text = "0";
         ButtonBehaviour.CanInteract = false;
         IsStarded = false;
+        //Remove
+        FindObjectOfType<Confetti>().PlayConfettis();
     }
 
 

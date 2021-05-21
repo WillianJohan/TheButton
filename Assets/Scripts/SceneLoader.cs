@@ -6,4 +6,9 @@ public class SceneLoader : MonoBehaviour
     {
         Application.LoadLevel(sceneName);
     }
+
+    public void RestartScene()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
