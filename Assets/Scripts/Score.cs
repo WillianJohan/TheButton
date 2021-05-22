@@ -1,10 +1,12 @@
 using TMPro;
 using UnityEngine;
 
-public class InGameScore : MonoBehaviour
+public class Score : MonoBehaviour
 {
     public static int Current { get; private set; } = 0;
     [SerializeField] TMP_Text CurrentScoreText;
+
+    
 
     void Start()
     {

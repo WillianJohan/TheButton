@@ -4,7 +4,7 @@ using UnityEngine;
 public class ButtonBehaviour : MonoBehaviour
 {
     [Header("Score Point")]
-    [SerializeField] InGameScore score;
+    [SerializeField] Score score;
 
     [Header("Button Position")]
     [SerializeField] Transform ButtonTransform;
@@ -24,7 +24,8 @@ public class ButtonBehaviour : MonoBehaviour
     private void Start()
     {
         IdlePosition = ButtonTransform.position;
-        
+
+        CanInteract = true;
         OnButtonDown += HandleButtonDown;
         OnButtonUp += HandleButtonUp;
     }

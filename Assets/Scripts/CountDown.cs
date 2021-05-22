@@ -49,10 +49,7 @@ public class CountDown : MonoBehaviour
     {
         OnFinishedTime -= HandleFinishedTime;
         SecondsDisplay.text = "0";
-        ButtonBehaviour.CanInteract = false;
         IsStarded = false;
-        //Remove
-        FindObjectOfType<Confetti>().PlayConfettis();
     }
 
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 628bd4458122228448c9a2d5d6ab627d
   - enabled: 1
+    path: Assets/Scenes/G_STANDARD.unity
+    guid: 820c364620f5e39498d66e84d1444d5f
+  - enabled: 1
     path: Assets/Scenes/G_COUNTDOWN.unity
     guid: 0bf01be4983e40340bbc7fa2d41f0adb
   m_configObjects: {}

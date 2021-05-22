@@ -10,7 +10,7 @@ public class Confetti : MonoBehaviour
         foreach (Transform t in Positions)
         {
             GameObject confetti = Instantiate(ConfettiPrefab, t.position, t.rotation);
-            Destroy(confetti, 2.0f);
+            Destroy(confetti, 5.0f);
         }
     }
 }
