@@ -12,11 +12,8 @@ This Game was created for no reason. it's just a game that has a button.
 ---
 
 <p>
- 
- <img src="/ScreenShots/MainMenuScreen.PNG" width="277" height="600">
- <img src="/ScreenShots/CountDownMenu.PNG" width="277" height="600">
+ <img src="/ScreenShots/MainMenuScreen.PNG" width="277" height="600"> 
  <img src="/ScreenShots/GameplayScreen.PNG" width="277" height="600">
- 
 </p>
 
 ---
