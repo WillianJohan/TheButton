@@ -688,6 +688,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1891973692}
+    - target: {fileID: 318403126550886336, guid: 4f2fb9e4eba2a9c4c901901b7c51972e,
+        type: 3}
+      propertyPath: m_text
+      value: 'Seconds: 10'
+      objectReference: {fileID: 0}
     - target: {fileID: 318403126899120812, guid: 4f2fb9e4eba2a9c4c901901b7c51972e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -702,6 +707,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1032049026155345633, guid: b90d7ecd782f33d4a885026eb40239ce,
+        type: 3}
+      propertyPath: TotalSeconds
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1032049026155345633, guid: b90d7ecd782f33d4a885026eb40239ce,
         type: 3}
       propertyPath: SecondsDisplay
@@ -1068,7 +1078,7 @@ PrefabInstance:
     - target: {fileID: 4625127504877882104, guid: 923d5d5dd56d6dc43b7690dcc6368451,
         type: 3}
       propertyPath: mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4625127504877882104, guid: 923d5d5dd56d6dc43b7690dcc6368451,
         type: 3}
