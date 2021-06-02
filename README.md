@@ -11,8 +11,13 @@ This Game was created for no reason. it's just a game that has a button.
 # Screenshots
 ---
 
-![Main Menu Scene](/ScreenShots/MainMenuScreen.PNG)
-![Gameplay Scene](/ScreenShots/GameplayScreen.PNG)
+<p>
+ 
+ <img src="/ScreenShots/MainMenuScreen.PNG" width="277" height="600">
+ <img src="/ScreenShots/CountDownMenu.PNG" width="277" height="600">
+ <img src="/ScreenShots/GameplayScreen.PNG" width="277" height="600">
+ 
+</p>
 
 ---
 
