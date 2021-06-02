@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/g_classic.unity
     guid: c230442f34e0f364ca38e53c69146335
+  - enabled: 1
+    path: Assets/Scenes/g_countdown_5.unity
+    guid: a863adc769029f0498038234752f4536
+  - enabled: 1
+    path: Assets/Scenes/g_countdown_10.unity
+    guid: 8e29bd36f07c33043a9ff16fb2dab040
+  - enabled: 1
+    path: Assets/Scenes/g_countdown_15.unity
+    guid: d0b1dacb1d2927545a3218b4284f1555
+  - enabled: 1
+    path: Assets/Scenes/g_countdown_30.unity
+    guid: ecdf5225af87ac740a856ac1b853626c
   m_configObjects: {}
