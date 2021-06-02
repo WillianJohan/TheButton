@@ -4,18 +4,22 @@ using UnityEngine;
 public class EndGameHandler : MonoBehaviour
 {
     [Header("UI Elements")]
-    [SerializeField] GameObject EndGameScreen;
-    [SerializeField] GameObject NewRecordText;
-    [SerializeField] TMP_Text RecordText;
-    [SerializeField] TMP_Text ScoreText;
+    [SerializeField] GameObject ClicksPanel;
+    [SerializeField] GameObject TimerPanel;
+
+    [Header("End Game UI Elements")]
+    [SerializeField] GameObject EndGamePanel;
+    [SerializeField] TMP_Text Header;
+    [SerializeField] TMP_Text RecordCountText;
+    [SerializeField] TMP_Text ClicksCountText;
 
     [Header("Sound Effects")]
     [SerializeField] AudioSource NewRecordAudio;
-
     
     [Header("Game Mode")]
     [SerializeField] PlayerDATA.GameMode mode;
     
+
     
     private void Awake()     => CountDown.OnFinishedTime += HandleEndGame;
     private void OnDestroy() => CountDown.OnFinishedTime -= HandleEndGame;
@@ -26,30 +30,43 @@ public class EndGameHandler : MonoBehaviour
     void HandleEndGame()
     {
         //Stop the interaction
-        ButtonBehaviour.IsClickable = false;
         CountDown.OnFinishedTime -= HandleEndGame;
+        ButtonBehaviour.IsClickable = false;
 
-        int Record = PlayerDATA.Load(mode);
-        int CurrentScore = Score.CurrentScore;
+        int oldRecord = PlayerDATA.Load(mode);
+        int currentClicks = Score.CurrentScore;
 
-        //Activates the "New Record" Text
-        EndGameScreen.SetActive(true);
-        RecordText.text = Record.ToString();
-        ScoreText.text = CurrentScore.ToString();
+        SetUIValues(currentClicks, oldRecord);
+        ActivateEndGameInterface();
 
-        HandleScore(Record, CurrentScore);
-
-        //FindObjectOfType<Confetti>().PlayConfettis();
+        FindObjectOfType<Confetti>().PlayConfettis();
     }
 
-    void HandleScore(int currentRecord, int currentScore)
+    void ActivateEndGameInterface()
     {
-        if (currentRecord > currentScore)
-            return;
+        // Desactivate the runtime UI
+        ClicksPanel.SetActive(false);
+        TimerPanel.SetActive(false);
 
-        NewRecordText.SetActive(true);
-        PlayerDATA.Save(mode, currentScore);
-        NewRecordAudio.Play();
-        //FindObjectOfType<Confetti>().PlayConfettis();
+        //Activate the EndGamePanel
+        EndGamePanel.SetActive(true);
     }
+
+    void SetUIValues(int currentClicks, int oldRecord)
+    {
+        //Set the values in the end game panel
+        RecordCountText.text = oldRecord.ToString();
+        ClicksCountText.text = currentClicks.ToString();
+
+        //Set the text to the Header in the end Game panel
+        if (currentClicks < oldRecord)
+            Header.text = "Game Over";
+        else
+        {
+            Header.text = "New Record!!";
+            PlayerDATA.Save(mode, currentClicks);
+            NewRecordAudio.Play();
+        }
+    }
+
 }
