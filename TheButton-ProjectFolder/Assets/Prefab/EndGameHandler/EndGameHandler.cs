@@ -14,7 +14,7 @@ public class EndGameHandler : MonoBehaviour
     [SerializeField] TMP_Text ClicksCountText;
 
     [Header("Sound Effects")]
-    [SerializeField] AudioSource NewRecordAudio;
+    [SerializeField] AudioSource[] NewRecordAudio;
     
     [Header("Game Mode")]
     [SerializeField] PlayerDATA.GameMode mode;
@@ -65,7 +65,8 @@ public class EndGameHandler : MonoBehaviour
         {
             Header.text = "New Record!!";
             PlayerDATA.Save(mode, currentClicks);
-            NewRecordAudio.Play();
+            int audioIndex = Random.Range(0, NewRecordAudio.Length - 1);
+            NewRecordAudio[audioIndex].Play();
         }
     }
 
