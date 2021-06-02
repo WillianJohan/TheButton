@@ -16,7 +16,7 @@ public class ButtonBehaviour : MonoBehaviour
     public AudioSource OnClickStart;
     public AudioSource OnClickOut;
 
-    public static bool IsClickable { get; set; }
+    public static bool IsClickable { get; set; } = true;
     public static event Action OnButtonDown;
     public static event Action OnButtonUp;
 
