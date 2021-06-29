@@ -5,9 +5,9 @@ This Game was created for no reason. it's just a game that has a button.
 #### How to play
  - Push the button
  - Release the button
- - Press the button again.
+ - Press the button again. (☞ﾟヮﾟ)☞
 
-
+To play you can download the apk from the [play store](https://play.google.com/store/apps/details?id=com.Johan.TheButton "The Button")
 # Screenshots
 ---
 
