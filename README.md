@@ -18,4 +18,4 @@ To play you can download the apk from the [play store](https://play.google.com/s
 
 ---
 
-###### Created with Unity 2020.3.10f1
+###### Created with Unity 2020.3.15f2
